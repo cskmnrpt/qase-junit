@@ -1,12 +1,12 @@
 package com.example;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-class AppTest {
+public class AppTest {
 
     @Test
-    void Test_without_any_Qase_Annotations() {
+    public void testWithoutAnyQaseAnnotations() {
         // Arrange
         App app = new App();
 
@@ -14,6 +14,6 @@ class AppTest {
         int result = app.add(2, 3);
 
         // Assert
-        assertEquals(5, result, "2 + 3 should equal 5");
+        assertEquals("2 + 3 should equal 5", 5, result);
     }
 }

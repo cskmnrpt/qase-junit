@@ -1,7 +1,7 @@
 package com.example;
 
 import io.qase.commons.annotation.*;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class IgnoreTest {
     @Test

@@ -1,8 +1,8 @@
 package com.example;
 
 import io.qase.commons.annotation.Step;
-import io.qase.junit5.Qase;
-import org.junit.jupiter.api.Test;
+import io.qase.junit4.Qase;
+import org.junit.Test;
 
 public class AttachTest {
 

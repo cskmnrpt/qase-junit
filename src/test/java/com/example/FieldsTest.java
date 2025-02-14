@@ -2,7 +2,7 @@ package com.example;
 
 import io.qase.commons.annotation.*;
 import io.qase.commons.models.annotation.Field;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class FieldsTest {
 

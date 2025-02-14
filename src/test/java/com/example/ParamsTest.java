@@ -1,22 +1,32 @@
 package com.example;
 
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
-import java.util.stream.Stream;
+import java.util.Arrays;
+import java.util.Collection;
 
+@RunWith(Parameterized.class)
 public class ParamsTest {
-    static Stream<Arguments> arguments() {
-        return Stream.of(
-                Arguments.of("Example1"),
-                Arguments.of("Example2"),
-                Arguments.of("Example3"));
+
+    private final String data;
+
+    public ParamsTest(String data) {
+        this.data = data;
     }
 
-    @ParameterizedTest
-    @MethodSource("arguments")
-    public void testMethod_success1(String data) {
+    @Parameterized.Parameters
+    public static Collection<Object[]> arguments() {
+        return Arrays.asList(new Object[][] {
+                { "Example1" },
+                { "Example2" },
+                { "Example3" }
+        });
+    }
+
+    @Test
+    public void testMethod_success1() {
         System.out.println("Data is: " + data);
     }
 }
