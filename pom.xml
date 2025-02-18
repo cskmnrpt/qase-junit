@@ -12,7 +12,7 @@
     <aspectj.version>1.9.22</aspectj.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <junit.version>4.13.2</junit.version>
+    <junit.version>4.13.1</junit.version>
   </properties>
 
   <dependencies>
@@ -33,7 +33,7 @@
     <dependency>
       <groupId>io.qase</groupId>
       <artifactId>qase-junit4-reporter</artifactId>
-      <version>4.0.0</version>
+      <version>4.0.6</version>
       <scope>test</scope>
     </dependency>
 
@@ -49,6 +49,12 @@
                   <argLine>
                       -javaagent:"${user.home}/.m2/repository/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                   </argLine>
+                    <properties>
+                    <property>
+                        <name>listener</name>
+                        <value>io.qase.junit4.QaseListener</value>
+                    </property>
+                    </properties>
               </configuration>
               <dependencies>
                   <dependency>
